@@ -1,5 +1,5 @@
 use crate::Route;
-use dioxus::{html::image, prelude::*};
+use dioxus::prelude::*;
 
 const NAVBAR_CSS: Asset = asset!("/assets/styling/navbar.css");
 const NAVBAR_IMAGE: Asset = asset!("/assets/images/climate-change-icon.svg"
@@ -20,7 +20,9 @@ pub fn Navbar() -> Element {
         id: "navbar",
 
         img {
-            src: "{NAVBAR_IMAGE}"
+            id: "image",
+            src: "{NAVBAR_IMAGE}",
+            alt: "Global Warming Icon",
         },
 
         Link {
