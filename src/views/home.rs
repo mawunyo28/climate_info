@@ -10,6 +10,13 @@ const TRANSPORT_1: Asset = asset!("/assets/images/transport1.jpg");
 const TRANSPORT_2: Asset = asset!("/assets/images/transport2.jpg");
 const AGRICULTURE_1: Asset = asset!("/assets/images/agriculture1.jpg");
 const AGRICULTURE_2: Asset = asset!("/assets/images/agriculture2.jpg");
+const  GLOBAL_TEMPS: Asset = asset!("/assets/images/GlobalTemp.png");
+const  SEA_LEVEL: Asset = asset!("/assets/images/SeaLevel.png");
+const  WATER: Asset = asset!("/assets/images/water.jpg");
+const  WEATHER: Asset = asset!("/assets/images/weather.jpg");
+const  ENERGY: Asset = asset!("/assets/images/energy.jpg");
+const  COMMUNITY: Asset = asset!("/assets/images/community.jpg");
+const  FORESTATION: Asset = asset!("/assets/images/forestation.jpg");
 
 #[component]
 pub fn Home() -> Element {
@@ -43,9 +50,7 @@ pub fn Home() -> Element {
                             div { "These gases trap heat, leading to a gradual rise in Earth’s temperature and disrupting climate systems." }
                             div { "The main causes include:" }
                         }
-                        img {
-
-                        }
+                        
                         h3 { "🌫️ Greenhouse Gas Emissions" }
                         p {
                             div { "Burning fossil fuels for energy and transportation releases large quantities of carbon dioxide (CO₂), methane (CH₄), and nitrous oxide (N₂O)—the key greenhouse gases responsible for global warming." }
@@ -138,9 +143,10 @@ pub fn Home() -> Element {
         }
         div {
             class: "chart-container temperature-chart",
-            
-            // You can later mount a temperature chart component here
-            // e.g. rsx! { TemperatureChart {} }
+            img {
+                            src: "{GLOBAL_TEMPS}",
+                            alt: "Greenhouse gas emission image 1"
+                        },
         }
 
         h3 { "🌊 Sea Level Rise" }
@@ -150,8 +156,10 @@ pub fn Home() -> Element {
         }
         div {
             class: "chart-container sea-level-chart",
-            // Placeholder for sea level chart visualization
-            // e.g. rsx! { SeaLevelChart {} }
+            img {
+                            src: "{SEA_LEVEL}",
+                            alt: "Greenhouse gas emission image 1"
+                        },
         }
 
         h3 { "⛈️ Extreme Weather" }
@@ -161,8 +169,10 @@ pub fn Home() -> Element {
         }
         div {
             class: "map-container weather-map",
-            // You could add an interactive map or image of extreme weather patterns
-            // e.g. rsx! { ExtremeWeatherMap {} }
+            img {
+                            src: "{WEATHER}",
+                            alt: "Greenhouse gas emission image 1"
+                        },
         }
 
         h3 { "🍽️ Food and Water Insecurity" }
@@ -172,7 +182,10 @@ pub fn Home() -> Element {
         }
         div {
             class: "chart-container food-security-chart",
-            // Optional: insert a crop yield trend chart or food production index
+            img {
+                            src: "{WATER}",
+                            alt: "Greenhouse gas emission image 1"
+                        },
         }
 
         h3 { "🧍‍♂️ Human Health and Migration" }
@@ -180,10 +193,7 @@ pub fn Home() -> Element {
             div { "Rising temperatures and environmental degradation contribute to health issues and force migration." }
             div { "Many populations are being displaced due to unlivable conditions." }
         }
-        div {
-            class: "chart-container migration-map",
-            // Optional: embed heat maps or migration flow visualizations
-        }
+       
     },
     div {
         class: "solutions-section flex flex-col space-y-4",
@@ -200,8 +210,10 @@ pub fn Home() -> Element {
         }
         div {
             class: "chart-container energy-transition-chart",
-            // Future component: renewable energy usage graph, CO₂ emissions reduction trends
-            // e.g. rsx! { EnergyTransitionChart {} }
+            img {
+                            src: "{ENERGY}",
+                            alt: "Greenhouse gas emission image 1"
+                        },
         }
 
         h3 { "🌱 Nature-Based Solutions" }
@@ -211,8 +223,10 @@ pub fn Home() -> Element {
         }
         div {
             class: "visual-container reforestation-map",
-            // Future component: satellite data maps, forest recovery dashboards
-            // e.g. rsx! { ForestRestorationMap {} }
+            img {
+                            src: "{FORESTATION}",
+                            alt: "Greenhouse gas emission image 1"
+                        },
         }
 
         h3 { "📜 Policy and Global Agreements" }
@@ -229,8 +243,10 @@ pub fn Home() -> Element {
         }
         div {
             class: "interactive-container community-impact",
-            // Future component: infographic or slider showing impact of small lifestyle changes
-            // e.g. rsx! { CommunityActionImpact {} }
+            img {
+                            src: "{COMMUNITY}",
+                            alt: "Greenhouse gas emission image 1"
+                        },
         }
     }
 
