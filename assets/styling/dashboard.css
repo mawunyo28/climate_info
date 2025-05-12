@@ -1,1 +1,7 @@
-
+img {
+    max-width: 50%; /* Reduces the image size to 80% of its container's width */
+    height: auto;   /* Maintains the aspect ratio */
+    display: block; /* Removes any extra space below the image */
+    margin: 0 auto; /* Centers the image horizontally */
+    padding-bottom: 20px; /* Adds space between images */
+}
