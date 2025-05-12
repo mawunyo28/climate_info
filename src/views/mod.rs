@@ -16,8 +16,9 @@ pub use home::Home;
 mod navbar;
 pub use navbar::Navbar;
 
-mod dashboard;
-pub use dashboard::Dashboard;
+// mod dashboard;
+// pub use dashboard::Dashboard;
 
-mod about;
-pub use about::About;
+// mod about;
+// pub use about::About;
+

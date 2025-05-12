@@ -2,7 +2,7 @@
 // need dioxus
 use dioxus::prelude::*;
 
-use views::{About,  Dashboard, Home, Navbar};
+use views::{Home, Navbar};
 
 /// Define a components module that contains all shared components for our app.
 mod components;
@@ -26,11 +26,11 @@ enum Route {
         Home {},
         // The route attribute can include dynamic parameters that implement [`std::str::FromStr`] and [`std::fmt::Display`] with the `:` syntax.
         // In this case, id will match any integer like `/blog/123` or `/blog/-456`.
-         #[route("/dashboard")]
-        Dashboard {},
+        //  #[route("/dashboard")]
+        // Dashboard {},
         
-        #[route("/about")]
-        About {}
+        // #[route("/about")]
+        // About {}
     
 }
 
@@ -40,6 +40,7 @@ const FAVICON: Asset = asset!("/assets/favicon.ico");
 // The asset macro also minifies some assets like CSS and JS to make bundled smaller
 const MAIN_CSS: Asset = asset!("/assets/styling/main.css");
 const TAILWIND_CSS: Asset = asset!("/assets/tailwind.css");
+
 
 fn main() {
     // The `launch` function is the main entry point for a dioxus app. It takes a component and renders it with the platform feature

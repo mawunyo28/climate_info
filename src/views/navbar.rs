@@ -29,14 +29,14 @@ pub fn Navbar() -> Element {
             to: Route::Home {},
             "Home"
         },
-         Link {
-            to: Route::Dashboard { },
-            "Dashboard"
-        },
-        Link {
-        to: Route::About {  },
-        "About"
-       },
+    //      Link {
+    //         to: Route::Dashboard { },
+    //         "Dashboard"
+    //     },
+    //     Link {
+    //     to: Route::About {  },
+    //     "About"
+    //    },
         },
 
     Outlet::<Route> {}
